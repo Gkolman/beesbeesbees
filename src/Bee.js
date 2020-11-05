@@ -1,8 +1,13 @@
 var Bee = function() {
-  Grub.prototype
-  grub.prototype = {} // grub functions 
-  _.extends(Grub.prototype, Bee.prototype) 
+  Grub.call(this);
+  //_.extend(Bee.prototype, Grub.prototype) 
+  this.age = 5;
+  this.color = 'yellow';
+  this.job = 'keep on growing';
 };
+
+Bee.prototype = Object.create(Grub.prototype);
+Bee.prototype.constructor = Bee;
 
 
 // Create a Bee class, in pseudoclassical style, with:
